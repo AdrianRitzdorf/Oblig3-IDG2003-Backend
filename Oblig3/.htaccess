@@ -1,0 +1,15 @@
+# Disabling indexing, the server side should handle navigation
+Options -Indexes
+
+# Disabling direct access to scripts used for the server side, they should not be accessed by the browser.
+<Files "connect.php">
+    Require all denied
+</Files>
+
+<Files "authenticate_admin.php">
+    Require all denied
+</Files>
+
+<Files "migration.sql">
+    Require all denied
+</Files>
